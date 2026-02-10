@@ -337,7 +337,7 @@ const handleDelete = async (id: string) => {
         {/* 🧾 Product List */}
         <div style={{width:'90%', display:'flex', flexDirection:'column', alignItems:'center'}}>
           <h2>Admin Products</h2>
-          <h3>Total Products: {items.length}</h3>
+          {/* <h3>Total Products: {items.length}</h3> */}
           <br/>
           <input placeholder="Filter Product"/>
           <br/>
