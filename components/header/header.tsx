@@ -9,7 +9,6 @@ import { IoIosSearch, IoMdArrowDropdown, IoMdMenu } from "react-icons/io";
 import { LiaTimesSolid } from "react-icons/lia";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
-
 export default function Header() {
   const [toggle, setToggle] = useState(false); // mobile menu
   const { totalItems } = useCart();
@@ -73,15 +72,14 @@ export default function Header() {
                 onClick={() => setOpen((prev) => !prev)}
               >
                 Categories{" "}
-                <IoMdArrowDropdown
-                  className={open ? "rotate" : ""}
-                  size={22}
-                />
+                <IoMdArrowDropdown className={open ? "rotate" : ""} size={22} />
               </button>
 
               <ul className="dropdown-menu">
                 <li>
-                  <Link href="/categories/68ce83d56457d49882ce1efe">Whiskey</Link>
+                  <Link href="/categories/68ce83d56457d49882ce1efe">
+                    Whiskey
+                  </Link>
                 </li>
                 <li>
                   <Link href="/categories/68ce840b6457d49882ce1f00">Wine</Link>
@@ -90,7 +88,9 @@ export default function Header() {
                   <Link href="/">Champagne</Link>
                 </li>
                 <li>
-                  <Link href="/categories/68ce84036457d49882ce1eff">Spirit</Link>
+                  <Link href="/categories/68ce84036457d49882ce1eff">
+                    Spirit
+                  </Link>
                 </li>
                 <li>
                   <Link href="/categories/68ce84136457d49882ce1f01">Vodka</Link>
@@ -123,7 +123,14 @@ export default function Header() {
 
           {/* Search Box */}
           <div className="search-container">
-            <IoIosSearch style={{ opacity: "0.5", fontSize: "25px", marginRight: "-5px", zIndex: "100" }} />
+            <IoIosSearch
+              style={{
+                opacity: "0.5",
+                fontSize: "25px",
+                marginRight: "-5px",
+                zIndex: "100",
+              }}
+            />
             <input
               className="input-capture"
               placeholder="Search for drinks"
@@ -135,9 +142,16 @@ export default function Header() {
 
           {/* Mobile menu toggle */}
           <div className="mobile-header-cart-menu-hold">
-            
             <div className="mobile-header-cart">
-              <Link href="/cart" style={{display:"flex", alignItems:'center', textDecoration:'none', color:'inherit'}}>
+              <Link
+                href="/cart"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                  color: "inherit",
+                }}
+              >
                 <MdOutlineShoppingCart className="cart-icons" />
                 <span className="cart-count">{totalItems}</span>
               </Link>
@@ -153,31 +167,51 @@ export default function Header() {
       {/* Mobile Side Menu */}
       <div className={`side-menu ${toggle ? "open" : ""}`}>
         <div className="mobile-show" onClick={handleToggle}>
-          <LiaTimesSolid size={35} color="white"/>
+          <LiaTimesSolid size={35} color="white" />
         </div>
 
         <div className="top-item-holder" onClick={handleToggle}>
           <Link href="/cart" className="cart-mobile-icon">
             <div className="mobile-header-cart">
-              <MdOutlineShoppingCart color="white" size={28} className="cart-icons" />
-              <span className="cart-count" style={{border:'1px solid whitesmoke'}}>{totalItems}</span>
+              <MdOutlineShoppingCart
+                color="white"
+                size={28}
+                className="cart-icons"
+              />
+              <span
+                className="cart-count"
+                style={{ border: "1px solid whitesmoke" }}
+              >
+                {totalItems}
+              </span>
             </div>
           </Link>
         </div>
 
         <nav className="mobile-link-holder">
           <div className="search-contained">
-            <IoIosSearch style={{ opacity: "0.6", fontSize: "25px", marginLeft:'10px' }} />
-            <input className="input-capture" placeholder="Search for drinks, brand" value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)} onKeyDown={(e) => {
-                  handleKeyDown(e);
-              }} />
+            <IoIosSearch
+              style={{ opacity: "0.6", fontSize: "25px", marginLeft: "10px" }}
+            />
+            <input
+              className="input-capture"
+              placeholder="Search for drinks, brand"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={(e) => {
+                handleKeyDown(e);
+              }}
+            />
           </div>
 
           <Link href="/" onClick={handleToggle} className="mobile-link-nav">
             Home
           </Link>
-          <Link href="/about" onClick={handleToggle}  className="mobile-link-nav">
+          <Link
+            href="/about"
+            onClick={handleToggle}
+            className="mobile-link-nav"
+          >
             About
           </Link>
 
@@ -195,44 +229,92 @@ export default function Header() {
             </button>
             {mobileDropdown && (
               <>
-                <Link href="/categories/68ce83d56457d49882ce1efe" onClick={handleToggle} className="mobile-link-nav">
+                <Link
+                  href="/categories/68ce83d56457d49882ce1efe"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Whiskey
                 </Link>
-                <Link href="/categories/68ce840b6457d49882ce1f00" onClick={handleToggle}  className="mobile-link-nav">
+                <Link
+                  href="/categories/68ce840b6457d49882ce1f00"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Wine
                 </Link>
-                 <Link href="/" onClick={handleToggle} className="mobile-link-nav">
+                <Link
+                  href="/"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Champagne
                 </Link>
-                <Link href="/categories/68ce84036457d49882ce1eff" onClick={handleToggle}  className="mobile-link-nav">
+                <Link
+                  href="/categories/68ce84036457d49882ce1eff"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Spirit
                 </Link>
-                <Link href="/categories/68ce84136457d49882ce1f01" onClick={handleToggle}  className="mobile-link-nav">
+                <Link
+                  href="/categories/68ce84136457d49882ce1f01"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Vodka
                 </Link>
-                 <Link href="/" onClick={handleToggle} className="mobile-link-nav">
+                <Link
+                  href="/"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Brandy
                 </Link>
-                <Link href="/categories/68ce84266457d49882ce1f04" onClick={handleToggle}  className="mobile-link-nav">
+                <Link
+                  href="/categories/68ce84266457d49882ce1f04"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Gin
                 </Link>
-                <Link href="/categories/68ce84496457d49882ce1f06" onClick={handleToggle}  className="mobile-link-nav">
+                <Link
+                  href="/categories/68ce84496457d49882ce1f06"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Cream
                 </Link>
-                <Link href="/" onClick={handleToggle}  className="mobile-link-nav">
+                <Link
+                  href="/"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Tequila
                 </Link>
-                <Link href="/" onClick={handleToggle}  className="mobile-link-nav">
+                <Link
+                  href="/"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Cognac
                 </Link>
-                 <Link href="/categories/68ce841d6457d49882ce1f02" onClick={handleToggle}  className="mobile-link-nav">
+                <Link
+                  href="/categories/68ce841d6457d49882ce1f02"
+                  onClick={handleToggle}
+                  className="mobile-link-nav"
+                >
                   Rum
                 </Link>
               </>
             )}
           </div>
 
-          <Link href="/contact" onClick={handleToggle} className="mobile-link-nav">
+          <Link
+            href="/contact"
+            onClick={handleToggle}
+            className="mobile-link-nav"
+          >
             Contact Us
           </Link>
         </nav>

@@ -7,7 +7,7 @@ import "./heroPage.css";
 const HeroPage = () => {
   const carousel = [
     {
-      background: "/dist1..webp",
+      background: "/dist1.webp",
     },
     {
       background: "/dist2.webp",
@@ -23,6 +23,9 @@ const HeroPage = () => {
     },
     {
       background: "/dist6.webp",
+    },
+    {
+      background: "/dist7.jpeg",
     },
   ];
 
