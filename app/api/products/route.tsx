@@ -77,11 +77,11 @@ export async function GET(req: Request) {
       },
     });
 
-    const formatted = products.map((p) => ({
-      ...p,
-      inStock: p.inStock ?? false,
-      categoryNames: p.categories.map((c) => c.category.name),
-    }));
+ const formatted = products.map((p: any) => ({
+  ...p,
+  inStock: p.inStock ?? false,
+  categoryNames: p.categories.map((c: any) => c.category.name),
+}));
 
     return new Response(
       JSON.stringify({

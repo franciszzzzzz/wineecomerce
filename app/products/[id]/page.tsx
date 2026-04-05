@@ -33,7 +33,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
     sku: product.sku ?? "N/A",
     bottlesPerCarton: product.bottlesPerCarton ?? 0,
     alcVol: product.alcVol ?? "",
-    categories: product.categories?.map((pc) => pc.category) ?? [],
+    categories: product.categories?.map((pc: any) => pc.category) ?? [],
   };
 
 
