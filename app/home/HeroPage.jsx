@@ -25,7 +25,7 @@ const HeroPage = () => {
       background: "/dist6.webp",
     },
     {
-      background: "/dist7.jpeg",
+      background: "/dist7.png",
     },
   ];
 
