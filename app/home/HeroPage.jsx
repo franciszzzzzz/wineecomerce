@@ -7,26 +7,27 @@ import "./heroPage.css";
 const HeroPage = () => {
   const carousel = [
     {
-      background: "/dist1.webp",
+      background: "/Home2.jpeg",
     },
     {
-      background: "/dist2.webp",
+      background: "/Home1.jpeg",
     },
     {
-      background: "/dist3.webp",
+      background: "/pic1.jpg",
     },
     {
-      background: "/dist4.webp",
+      background: "/Home3.jpeg",
     },
     {
-      background: "/dist5.webp",
+      background: "/pic4.jpg",
     },
     {
-      background: "/dist6.webp",
+      background: "/pic3.jpg",
     },
     {
-      background: "/dist7.png",
+      background: "/Home4.jpeg",
     },
+    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
