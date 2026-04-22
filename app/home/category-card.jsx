@@ -5,6 +5,25 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 const CategoryCard = () => {
   return (
     <>
+<div className="categoryCard">
+        <div
+          className="categoryCard_img"
+          style={{
+            backgroundImage: `url(/baron.png)`,
+          }}
+        ></div>
+        <p className="categoryCard_text">Wines</p>
+        <Link
+          href="/categories/68ce840b6457d49882ce1f00"
+          style={{ textDecoration: "none" }}
+        >
+          <button className="categoryCard_btn button">
+            Shop here
+            <FaCircleArrowRight size={15} />
+          </button>
+        </Link>
+      </div>
+
       <div className="categoryCard">
         <div
           className="categoryCard_img"
@@ -52,7 +71,7 @@ const CategoryCard = () => {
         ></div>
         <p className="categoryCard_text">Tequila</p>
         <Link
-          href="/categories/68ce840b6457d49882ce1f00" // the link is wrong
+          href="/categories/68e3a853d8de30883d06b296" 
           style={{ textDecoration: "none" }}
         >
           <button className="categoryCard_btn button">
@@ -109,7 +128,7 @@ const CategoryCard = () => {
         ></div>
         <p className="categoryCard_text">Cognac</p>
         <Link
-          href="/categories/68ce84426457d49882ce1f05" // the link is wrong
+          href="/categories/68e3a7b0d8de30883d06b294" 
           style={{ textDecoration: "none" }}
         >
           <button className="categoryCard_btn button">
@@ -128,7 +147,7 @@ const CategoryCard = () => {
         ></div>
         <p className="categoryCard_text">Champagne</p>
         <Link
-          href="/categories/68ce84496457d49882ce1f06" // the link is wrong
+          href="/categories/68e3a740d8de30883d06b293" 
           style={{ textDecoration: "none" }}
         >
           <button className="categoryCard_btn button">

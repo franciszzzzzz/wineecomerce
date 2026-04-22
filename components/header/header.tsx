@@ -77,15 +77,15 @@ export default function Header() {
 
               <ul className="dropdown-menu">
                 <li>
+                  <Link href="/categories/68ce840b6457d49882ce1f00">Wine</Link>
+                </li>
+                <li>
                   <Link href="/categories/68ce83d56457d49882ce1efe">
                     Whiskey
                   </Link>
                 </li>
                 <li>
-                  <Link href="/categories/68ce840b6457d49882ce1f00">Wine</Link>
-                </li>
-                <li>
-                  <Link href="/">Champagne</Link>
+                  <Link href="/categories/68e3a740d8de30883d06b293">Champagne</Link>
                 </li>
                 <li>
                   <Link href="/categories/68ce84036457d49882ce1eff">
@@ -95,9 +95,9 @@ export default function Header() {
                 <li>
                   <Link href="/categories/68ce84136457d49882ce1f01">Vodka</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/">Brandy</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/categories/68ce84266457d49882ce1f04">Gin</Link>
                 </li>
@@ -105,10 +105,10 @@ export default function Header() {
                   <Link href="/categories/68ce84496457d49882ce1f06">Cream</Link>
                 </li>
                 <li>
-                  <Link href="/">Tequila</Link>
+                  <Link href="/categories/68e3a853d8de30883d06b296">Tequila</Link>
                 </li>
                 <li>
-                  <Link href="/">Cognac</Link>
+                  <Link href="/categories/68e3a7b0d8de30883d06b294">Cognac</Link>
                 </li>
                 <li>
                   <Link href="/categories/68ce841d6457d49882ce1f02">Rum</Link>
