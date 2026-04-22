@@ -87,11 +87,11 @@ export default function Header() {
                 <li>
                   <Link href="/categories/68e3a740d8de30883d06b293">Champagne</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/categories/68ce84036457d49882ce1eff">
                     Spirit
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/categories/68ce84136457d49882ce1f01">Vodka</Link>
                 </li>
