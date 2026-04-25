@@ -69,7 +69,7 @@ export async function GET(req: Request) {
       where,
       skip,
       take: limit,
-      orderBy: { createdAt: "desc" },
+      orderBy: categoryId ? { name: "asc" } : { createdAt: "desc" },
       include: {
         categories: {
           include: { category: true },
